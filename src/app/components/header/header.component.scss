@@ -1,0 +1,20 @@
+.app-header {
+    background-color: white;
+    border: 2px solid orchid;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    img {
+        height: 50px;
+        margin-right: 10px;
+    }
+  .navbar {
+    font-weight: bold;
+    background-color: white !important;
+    &-brand {
+      color: #fd4b14;
+      font-weight: bold;
+    }
+  }
+}
