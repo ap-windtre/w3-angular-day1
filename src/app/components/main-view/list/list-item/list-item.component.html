@@ -1,12 +1,12 @@
 <div class="row product-row">
-    <label class="col-sm pointer">
-        Nome prodotto
+    <label class="col-sm pointer" [routerLink]="['/detail', product.id]">
+        {{product.name}}
     </label>
     <label class="col-sm">
-        10 €
+        {{product.price | currency:'EUR':true}}
     </label>
     <label class="col-sm">
-        Pasta
+        {{product.category}}
     </label>
-    <img src="./assets/icon/trash.svg" style="cursor: pointer;">
+    <img src="./assets/icon/trash.svg" (click)="onDelete(product.id)" style="cursor: pointer;">
 </div>

@@ -2,10 +2,12 @@
     <div class="form-group">
         <label for="search-text">Filtra prodotto:</label>
         <input
-          id="search-text"
-          type="text"
-          class="form-control"
-          placeholder="Inserisci il nome del prodotto..." />
+            id="search-text"
+            type="text"
+            class="form-control"
+            [(ngModel)]="filterText"
+            (input)="onSearch()"
+            placeholder="Inserisci il nome del prodotto...">
     </div>
 </div>
 

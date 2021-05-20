@@ -1,13 +1,13 @@
-npm install -g @angular/cli
-ng new corso-w3-angular
+    npm install -g @angular/cli
+    ng new corso-w3-angular
 
-// Scegliere
-strict = no
-routing = yes
-css style = SCSS
+    // Scegliere
+    strict = no
+    routing = yes
+    css style = SCSS
 
-// Testare poi con 
+    // Testare poi con
 
-cd corso-w3-angular
-ng serve
- No newline at end of file
+    cd corso-w3-angular
+    ng serve
+     No newline at end of file

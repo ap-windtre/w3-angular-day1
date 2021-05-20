@@ -1,4 +1,5 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ProductItem } from '../../../models/product';
 
 @Component({
   selector: 'app-list',
@@ -7,6 +8,9 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 })
 export class ListComponent implements OnInit, OnChanges {
 
+  @Input() products!: Array<ProductItem>;
+  @Output() deleteItem: EventEmitter<number> = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void { }
@@ -14,5 +18,10 @@ export class ListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     // Vediamo insieme cosa accade
   }
+
+  onDeleteItem(id: number): void {
+    this.deleteItem.emit(id);
+  }
+
 }
 

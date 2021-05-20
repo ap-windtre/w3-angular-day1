@@ -1,6 +1,6 @@
 <h1>Prodotti (main-component)</h1>
 <div class="container">
-  <app-search-item></app-search-item>
-  <app-list></app-list>
+  <app-search-item [products]="products" (filtered)="onFiltered($event)" ></app-search-item>
+  <app-list [products]="products" (deleteItem)="onDeleteItem($event)"></app-list>
 </div>
 

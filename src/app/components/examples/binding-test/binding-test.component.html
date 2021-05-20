@@ -1,0 +1,33 @@
+<h1>Binding</h1>
+
+<p>
+    <strong>String interpolation</strong>: {{property1}}<br/>
+    <strong>String interpolation</strong>: {{property2}}<br/>
+    <strong>String interpolation</strong>: {{property3 | json}}<br/>
+    <strong>String interpolation</strong>: {{property4}}
+</p>
+
+<input type="text" (keydown)="onKeyDown($event)">
+<button [disabled]="property1 && property2 && !property3"
+    (click)="buy(productId, $event)">Acquista</button>
+<button disabled="disabled">Click me if you can 2</button>
+
+<h2>La data di oggi è {{today | date:'dd/MM/yyyy'}}</h2>
+<h3>{{property1 | uppercase}}</h3>
+<h3>{{property2 | currency:'EUR'}}</h3>
+
+<!-- DAY 3: PIPES <h3>{{nome | sayHello:'prova'}}</h3>-->
+
+<br/>
+<a href="http://www.windtre.it">WindTre</a><br/>
+<a [href]="siteUrl">WindTre</a><br/>
+
+<br/>
+<!-- TEMPLATE DRIVEN FORM-->
+Nome: <input type="text" [(ngModel)]="nome" /><br/>
+<span *ngIf="!nome.length">Il nome è obbligatorio</span>
+
+Cognome: <input type="text" [(ngModel)]="cognome" /><br/>
+<span *ngIf="!cognome.length">Il cognome è obbligatorio</span>
+
+<button (click)="salvaUtente()" [disabled]="!(nome.length && cognome.length)">Salva</button>
